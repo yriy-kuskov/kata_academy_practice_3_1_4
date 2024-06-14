@@ -1,0 +1,62 @@
+/* Способ подключения шрифтов взят отсюда: https://fontstorage.com/blog/about-font-face-part-two/ */
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('../fonts/TTLakes/ttlakes-regular-webfont.eot');
+    src: local('TT Lakes'), local('TTLakes'),
+         url('../fonts/TTLakes/ttlakes-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/TTLakes/ttlakes-regular-webfont.woff') format('woff'),
+         url('../fonts/TTLakes/ttlakes-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('../fonts/TTLakes/ttlakes-bold-webfont.eot');
+    src: local('TT Lakes Bold'), local('TTLakes-Bold'),
+         url('../fonts/TTLakes/ttlakes-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/TTLakes/ttlakes-bold-webfont.woff') format('woff'),
+         url('../fonts/TTLakes/ttlakes-bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('../fonts/TTLakes/ttlakes-italic-webfont.eot');
+    src: local('TT Lakes Italic'), local('TTLakes-Italic'), 
+         url('../fonts/TTLakes/ttlakes-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/TTLakes/ttlakes-italic-webfont.woff') format('woff'),
+         url('../fonts/TTLakes/ttlakes-italic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('../fonts/TTLakes/ttlakes-bolditalic-webfont.eot');
+    src: local('TT Lakes Bold Italic'), local('TTLakes-BoldItalic'), 
+         url('../fonts/TTLakes/ttlakes-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/TTLakes/ttlakes-bolditalic-webfont.woff') format('woff'),
+         url('../fonts/TTLakes/ttlakes-bolditalic-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+body {
+    font-family: 'TT Lakes';
+}
+
+/* Доступное скрытие элементов */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
