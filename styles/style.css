@@ -44,7 +44,7 @@
 }
 
 body {
-    font-family: 'TT Lakes';
+    font-family: 'TT Lakes', 'Arial', sans-serif;
 }
 
 /* Доступное скрытие элементов */
