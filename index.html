@@ -3,43 +3,71 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/style.css">
         <title>CPS: Услуги и сервисы</title>
         <meta name="description" content="Список предоставляемых услуг и сервисов компании CPS. Их описание и цены.">
         <meta name="keywords" content="cps, услуги, сервисы, цены">
     </head>
     <body>
-        <header class="header">
+        <header class="main-header">
             <h1 class="page-title">Услуги и сервисы</h1>
             <nav class="main-nav">
-                <button class="menu-toggle-btn">Открыть меню</button>
-                <img src="" alt="CPS" class="logo">
+                <button class="menu-toggle-btn" type="button">Открыть меню</button>
+                <a class="main-nav_logo" title="Вы находитесь на главной странице сайта">
+                    <img class="logo" src="images/cps_logo.svg" alt="Перейти на главную страницу сайта CPS" width="98" height="52">
+                </a>
                 <ul class="main-nav__links">
-                    <li class="main-nav__link"><a href="">Позвонить</a></li>
-                    <li class="main-nav__link"><a href="">Написать</a></li>
-                    <li class="main-nav__link"><a href="">Личный кабинет</a></li>
-                    <li class="main-nav__link"><a href="">Оставить заявку</a></li>
-                    <li class="main-nav__link"><a href="">Статус ремонта</a></li>
+                    <li class="main-nav__link">
+                        <a href="">Позвонить</a>
+                    </li>
+                    <li class="main-nav__link">
+                        <a href="">Написать</a>
+                    </li>
+                    <li class="main-nav__link">
+                        <a href="">Личный кабинет</a>
+                    </li>
+                </ul>
+                <ul class="main-nav__links">
+                    <li class="main-nav__link">
+                        <a href="">Оставить заявку</a>
+                    </li>
+                    <li class="main-nav__link">
+                        <a href="">Статус ремонта</a>
+                    </li>
                 </ul>
             </nav>
             <nav class="slide-menu">
                 <ul>
-                    <li><a href="">Ремонтируемые устройства</a></li>
-                    <li><a href="">Дополнительные услуги</a></li>
-                    <li><a href="">Цены на услуги</a></li>
-                    <li><a href="">Адреса сервисных центров</a></li>
-                    <li><a href="">Специальные цены</a></li>
-                    <li><a href="">Отзывы</a></li>
+                    <li class="slide-menu__link">
+                        <a href="">Ремонтируемые устройства</a>
+                    </li>
+                    <li class="slide-menu__link">
+                        <a href="">Дополнительные услуги</a>
+                    </li>
+                    <li class="slide-menu__link">
+                        <a href="">Цены на услуги</a>
+                    </li>
+                    <li class="slide-menu__link">
+                        <a href="">Адреса сервисных центров</a>
+                    </li>
+                    <li class="slide-menu__link">
+                        <a href="">Специальные цены</a>
+                    </li>
+                    <li class="slide-menu__link">
+                        <a href="">Отзывы</a>
+                    </li>
                 </ul>
             </nav>
         </header>
         <main>            
             <article>
-                <img src="" alt="Вывеска компании CPS">
+                <h2>Ремонтируемые устройства</h2>
+                <img src="pictures/main_page/_MG_3223.png" alt="Вывеска компании CPS" width="532" height="307">
                 <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. 
                 Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
 
                 <p>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера</p>
-                <button class="show-more">Читать далее</button>
+                <button class="show-more" type="button">Читать далее</button>
             </article>          
         </main>        
     </body>
