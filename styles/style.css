@@ -33,18 +33,50 @@
 }
 
 @font-face {
-    font-family: 'TT Lakes';
-    src: url('../fonts/TTLakes/ttlakes-bolditalic-webfont.eot');
-    src: local('TT Lakes Bold Italic'), local('TTLakes-BoldItalic'), 
-         url('../fonts/TTLakes/ttlakes-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/TTLakes/ttlakes-bolditalic-webfont.woff') format('woff'),
-         url('../fonts/TTLakes/ttlakes-bolditalic-webfont.ttf') format('truetype');
+    font-family: "TT Lakes";
+    src: url("../fonts/TTLakes/ttlakes-bolditalic-webfont.eot");
+    src: local("TT Lakes Bold Italic"), local("TTLakes-BoldItalic"), 
+         url("../fonts/TTLakes/ttlakes-bolditalic-webfont.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/TTLakes/ttlakes-bolditalic-webfont.woff") format("woff"),
+         url("../fonts/TTLakes/ttlakes-bolditalic-webfont.ttf") format("truetype");
     font-weight: bold;
     font-style: italic;
 }
 
+/* Базовые стили */
 body {
-    font-family: 'TT Lakes', 'Arial', sans-serif;
+    font-family: "TT Lakes", "Arial", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 18px;
+    color: #1b1c21;
+
+    background-color: #f8f8f8;
+}
+
+h1 {
+    font-size: 28px;
+    line-height: 40px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a,
+.show-more {
+    font-size: 16px;
+    line-height: 24px;
+    color: #1b1c21;
+}
+
+.slide-menu__link a {
+    color: #7e7e82;
+
+}
+
+.slide-menu__link--active {
+    background-color: #ffffff;
 }
 
 /* Доступное скрытие элементов */
@@ -59,4 +91,27 @@ body {
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
-  }
+}
+
+.main-nav {
+    background-color: #ffffff;
+}
+
+body {
+    margin: 0;
+}
+
+.main-header {
+    width: 100%;
+}
+
+.main-nav {
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.main-nav__links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
