@@ -124,6 +124,7 @@ button {
 }
 
 .main-nav {
+    border: 1px solid #d9fff5;
     background-color: #ffffff;
 }
 
