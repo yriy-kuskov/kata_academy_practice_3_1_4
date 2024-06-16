@@ -48,6 +48,13 @@
  * Это шрифт TTLakes medium: https://webfonts.pro/base-web-fonts/sans-serif-grotesque/897-tt-lakes.html#Medium 
 **/
 
+/* Смотри: https://qna.habr.com/q/520184 */
+html,
+header,
+nav {
+    box-sizing: border-box;
+}
+
 /* Базовые стили */
 body {
     font-family: "TT Lakes", "Arial", sans-serif;
@@ -59,6 +66,10 @@ body {
     background-color: #f8f8f8;
 }
 
+body {
+    margin: 0;
+}
+
 h1 {
     font-size: 28px;
     line-height: 40px;
@@ -68,31 +79,20 @@ a {
     text-decoration: none;
 }
 
-a,
-.expand-block__btn {
+a {
     font-size: 16px;
     line-height: 24px;
     color: #1b1c21;
 }
 
-.slide-menu__link a {
-    color: #7e7e82;
-
-}
-
-.slide-menu__link--active {
-    background-color: #ffffff;
-}
-
-.main-nav__divider::before {
-    content: url("../images/divider.svg");
-}
-
-.page-title::before {
-    content: url("../images/highlight.svg");
-    margin-right: 12px;
-
-    vertical-align: middle;
+/* Сбрасываем стили кнопок. Источник: https://www.cat-in-web.ru/styling-buttons/ */
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 /* Доступное скрытие элементов */
@@ -112,52 +112,33 @@ a,
     overflow: hidden;
 }
 
+.main-header {
+    margin-bottom: 24px;
+}
+
+.main-nav {
+    padding: 24px 16px;
+}
+
+.main-nav__divider::before {
+    content: url("../images/divider.svg");
+}
+
 .main-nav {
     background-color: #ffffff;
 }
 
-body {
-    margin: 0;
-}
-
-.main-header {
-    width: 100%;
-}
-
-/* Располагаем элементы хедера: позиционируем их и задаём размеры из макета */
 .main-nav {
     display: flex;
     align-items: center;
     margin-bottom: 24px;
-}
-
-.icons-menu,
-.slide-menu {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.icons-menu {
-    justify-content: space-between;
+    width: 100%;
 }
 
 .main-nav__logo {
     width: 96.55px;
     height: 50.81px;
 }
-
-.icons-menu__item {
-    width: 40px;
-    height: 40px;
-}
-
-.icons-menu__item:not(:first-child) {
-   margin-left: 16px;
-}
-
-/* Теперь задаём отступы элементам хедера */
 
 .main-nav .icons-menu:first-of-type {
     margin-right: 16.73px;
@@ -180,19 +161,67 @@ body {
     margin-bottom: 24px;
 }
 
+.page-title::before {
+    content: url("../images/highlight.svg");
+    margin-right: 12px;
+
+    vertical-align: middle;
+}
+
+.slide-nav {
+    padding-left: 16px;
+}
+
 .slide-menu {
-    margin-left: 16px;
+    overflow-x: scroll;
+    align-items: center;
 }
 
-.main-header {
-    margin-bottom: 24px;
+.slide-menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-/* Стилизуем контент */
+.slide-menu__link a {
+    color: #7e7e82;
+    text-wrap: nowrap;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+.slide-menu__link--active {
+    background-color: #ffffff;
+    border: 2px solid #b8ffec;
+    border-radius: 8px;
+}
+
+.icons-menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.icons-menu {
+    justify-content: space-between;
+}
+
+.icons-menu__item {
+    width: 40px;
+    height: 40px;
+}
+
+.icons-menu__item:not(:first-child) {
+   margin-left: 16px;
+}
+
 .article-info {
     margin-bottom: 35px;
 }
 
+/* Метод обрезки изображения взят отсюда: https://tpverstak.ru/cropping-images-css-svg/ */
 .article-info__img-container {
     position: relative;
     overflow: hidden;
@@ -210,6 +239,10 @@ body {
     object-fit: cover;
 }
 
+.article-info .expand-block {
+    margin-bottom: 16px;
+}
+
 .expand-block {
     padding: 0 16px;
 }
@@ -221,26 +254,22 @@ body {
 }
 
 .expand-block__btn {
+    font-weight: 500;    
+}
+
+.expand-block__btn {
+    font-size: 16px;
+    line-height: 24px;
     color: #1b1c21;
-    font-weight: 500;
 }
 
-.article-info .expand-block {
-    margin-bottom: 16px;
-}
-
-/* Сбрасываем стили кнопок. Источник: https://www.cat-in-web.ru/styling-buttons/ */
-button {
-    padding: 0;
-    border: none;
-    font: inherit;
-    color: inherit;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-.main-nav {
-    padding: 24px 16px;
+.expand-block__btn::before {
+    content: url("../images/icons/expand.svg");
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
 }
 
 .round-btn-burger::before {
