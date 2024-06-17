@@ -1,0 +1,540 @@
+/* Способ подключения шрифтов взят отсюда: https://fontstorage.com/blog/about-font-face-part-two/ */
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('../fonts/TTLakes/ttlakes-regular-webfont.eot');
+    src: local('TT Lakes'), local('TTLakes'),
+         url('../fonts/TTLakes/ttlakes-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/TTLakes/ttlakes-regular-webfont.woff') format('woff'),
+         url('../fonts/TTLakes/ttlakes-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('../fonts/TTLakes/ttlakes-medium-webfont.eot');
+    src: local('TT Lakes Medium'), local('TTLakes-Medium'),
+         url('../fonts/TTLakes/ttlakes-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/TTLakes/ttlakes-medium-webfont.woff') format('woff'),
+         url('../fonts/TTLakes/ttlakes-medium-webfont.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('../fonts/TTLakes/ttlakes-bold-webfont.eot');
+    src: local('TT Lakes Bold'), local('TTLakes-Bold'),
+         url('../fonts/TTLakes/ttlakes-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/TTLakes/ttlakes-bold-webfont.woff') format('woff'),
+         url('../fonts/TTLakes/ttlakes-bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('../fonts/TTLakes/ttlakes-italic-webfont.eot');
+    src: local('TT Lakes Italic'), local('TTLakes-Italic'), 
+         url('../fonts/TTLakes/ttlakes-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/TTLakes/ttlakes-italic-webfont.woff') format('woff'),
+         url('../fonts/TTLakes/ttlakes-italic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "TT Lakes";
+    src: url("../fonts/TTLakes/ttlakes-mediumitalic-webfont.eot");
+    src: local("TT Lakes Medium Italic"), local("TTLakes-MediumItalic"), 
+         url("../fonts/TTLakes/ttlakes-mediumitalic-webfont.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/TTLakes/ttlakes-mediumitalic-webfont.woff") format("woff"),
+         url("../fonts/TTLakes/ttlakes-mediumitalic-webfont.ttf") format("truetype");
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "TT Lakes";
+    src: url("../fonts/TTLakes/ttlakes-bolditalic-webfont.eot");
+    src: local("TT Lakes Bold Italic"), local("TTLakes-BoldItalic"), 
+         url("../fonts/TTLakes/ttlakes-bolditalic-webfont.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/TTLakes/ttlakes-bolditalic-webfont.woff") format("woff"),
+         url("../fonts/TTLakes/ttlakes-bolditalic-webfont.ttf") format("truetype");
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Смотри: https://qna.habr.com/q/520184 */
+html,
+header,
+nav {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family: "TT Lakes", "Arial", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 18px;
+    color: #1b1c21;
+
+    background-color: #f8f8f8;
+}
+
+h1 {
+    font-size: 28px;
+    line-height: 40px;
+}
+
+a {
+    font-size: 16px;
+    line-height: 24px;
+    color: #1b1c21;
+
+    text-decoration: none;
+}
+
+/* Сбрасываем стили кнопок. Источник: https://www.cat-in-web.ru/styling-buttons/ */
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* Доступное скрытие элементов */
+.visually-hidden,
+.icons-menu__text,
+.main-nav .icons-menu:nth-of-type(2),
+.main-nav__divider:first-of-type {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+
+    border: 0;
+    
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.main-header {
+    margin-bottom: 24px;
+}
+
+.main-header__wrapper {
+    margin-bottom: 24px;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 24px;
+    padding: 24px 16px;
+
+    border-bottom: 1px solid #d9fff5;
+    background-color: #ffffff;
+}
+
+.main-nav__divider::before {
+    content: url("../img/divider.svg");
+}
+
+.main-nav__divider:last-of-type {
+    margin-left: auto;
+}
+
+.main-nav__logo {
+    width: 96.55px;
+    height: 50.81px;
+    margin-right: 16.73px;
+}
+
+.main-nav .icons-menu:first-of-type {
+    margin-right: 16.73px;
+}
+
+.main-nav .icons-menu:last-of-type {
+    margin-left: 20px;
+}
+
+.page-title {
+    margin: 0;
+}
+
+.page-title::before {
+    content: url("../img/highlight.svg");
+    margin-right: 12px;
+
+    vertical-align: middle;
+}
+
+.icons-menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.icons-menu__item {
+    width: 40px;
+    height: 40px;
+}
+
+.icons-menu__item:not(:first-child) {
+    margin-left: 16px;
+ }
+
+.icons-menu__item a {
+    display: block;
+}
+
+.icons-menu__item a::after {
+    vertical-align: middle;
+}
+
+.icons-menu__text {
+    font-weight: 500;
+}
+
+.slide-nav {
+    padding-left: 16px;
+}
+
+.slide-menu {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    overflow-x: scroll;
+    
+}
+
+.slide-menu__link--active {
+    background-color: #ffffff;
+    border: 2px solid #b8ffec;
+    border-radius: 8px;
+}
+
+.slide-menu__link a {
+    display: block;
+    padding: 8px 16px;
+
+    text-wrap: nowrap;
+    color: #7e7e82;
+}
+
+.article-info {
+    margin-bottom: 35px;
+}
+
+/* Метод обрезки изображения взят отсюда: https://tpverstak.ru/cropping-images-css-svg/ */
+.article-info__img-container {
+    position: relative;
+    width: 100%;
+    min-height: 176px;
+
+    overflow: hidden;
+}
+
+.article-info__img-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 176px;
+
+    transform: translate(-50%,-50%);  
+    object-fit: cover;
+}
+
+.article-info .expand-block {
+    margin-bottom: 16px;
+    padding: 0 16px;
+}
+
+.expand-block {
+    padding: 0;
+}
+
+.expand-block__content {
+    margin-bottom: 16px;
+    max-height: 90px;
+
+    overflow-y: hidden;
+}
+
+.expand-block__btn {   
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #1b1c21; 
+}
+
+.expand-block__btn::before {
+    content: url("../img/icons/expand.svg");
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+
+    vertical-align: middle;
+}
+
+.round-btn-burger::after {
+    content: url("../img/icons/burger.svg");
+}
+
+.round-btn-checkstatus::after {
+    content: url("../img/icons/checkstatus.svg");
+}
+
+.round-btn-repair::after {
+    content: url("../img/icons/repair.svg");
+}
+
+.round-btn-chat::after {
+    content: url("../img/icons/chat.svg");
+}
+
+.round-btn-call::after {
+    content: url("../img/icons/call.svg");
+}
+
+.round-btn-profile::after {
+    content: url("../img/icons/profile.svg");
+}
+
+@media (min-width: 768px) {
+    body {
+        line-height: 20px;
+    }
+
+    .main-header {
+        margin-bottom: 32px;
+    }
+
+    .main-header__wrapper {
+        margin-bottom: 32px;
+    }
+
+    .main-nav .icons-menu:nth-of-type(2) {
+        position: unset;
+        width: auto;
+        height: auto;
+        margin: 0;
+        margin-left: auto;
+        padding: 0;
+
+        white-space: nowrap;
+
+        border: 0;
+
+        clip-path: unset;
+        clip: unset;
+        overflow: unset;
+    }
+
+    .main-nav .icons-menu:first-of-type {
+        margin-right: 20px;
+    }
+
+    .main-nav__divider:first-of-type {
+        position: unset;
+        width: unset;
+        height: unset;
+        margin: unset;
+        padding: unset;
+
+        white-space: unset;
+
+        border: unset;
+
+        clip-path: unset;
+        clip: unset;
+        overflow: unset;
+    }
+
+    .main-nav__divider:last-of-type {
+        margin-left: 20px;
+    }
+
+    .main-nav__logo {
+        margin-left: 20.73px;
+    }
+
+    .page-title::before {
+        margin-right: 20px;
+    }
+
+    .slide-nav {
+        padding-left: 24px;
+    }
+
+    .article-info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        padding: 0 24px;
+    }
+
+    .article-info__img-container {
+        flex-basis: 360px;
+        min-height: 208px;
+        margin-left: 48px;
+    }
+    
+    .article-info__img-container img {
+        height: 208px;
+    }
+
+    .article-info .expand-block {
+        padding: 0;
+    }
+
+    .expand-block {
+        flex-basis: 312px;
+        flex-grow: 1;
+    }
+
+    .expand-block__content {
+        margin-bottom: 10px;
+        max-height: 160px;
+    }
+
+    .expand-block__content p:first-of-type {
+        margin-top: 0;
+    }
+    
+}
+
+@media (min-width: 1120px) {
+    .main-header {
+        margin-bottom: 7px;
+        padding: 42px 25px 0 0;
+    }
+
+    .main-header__wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .main-nav {
+        display: flex;
+        align-items: flex-start;
+        order: 2;
+        width: auto;
+        margin-bottom: 0;
+        margin-left: auto;        
+        padding: 0 7px 0 0;
+
+        border-bottom: none;
+        background-color: transparent;
+    }
+
+    .main-nav .icons-menu:nth-of-type(1),
+    .main-nav .icons-menu:nth-of-type(2),
+    .main-nav__divider,
+    .main-nav__divider:first-of-type,
+    .main-nav__logo {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+
+        white-space: nowrap;
+
+        border: 0;
+
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
+
+    .icons-menu:nth-of-type(3) .icons-menu__text {
+        position: unset;
+        width: auto;
+        height: auto;
+        margin: 0;
+        margin-left: auto;
+        padding: 0;
+
+        white-space: nowrap;
+
+        border: 0;
+
+        clip-path: unset;
+        clip: unset;
+        overflow: unset;
+    }
+
+    .icons-menu__item {
+        width: auto;
+        height: auto;
+    }
+
+    .icons-menu__item a::after {
+        margin-left: 9px;
+    }
+
+    .page-title {
+        order: 1;
+    }
+
+    .page-title::before {
+        margin-right: 30px;
+    }
+
+    .slide-nav {
+        padding-left: 34px;
+    }
+
+    .slide-menu {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        overflow-x: unset;
+    }
+
+    .article-info {
+        margin-bottom: 49px;
+        padding: 0 25px 0 34px;
+    }
+
+    .article-info__img-container {
+        flex-basis: 531px;
+        min-height: 307px;
+        margin-left: 36px;
+    }
+    
+    .article-info__img-container img {
+        height: 307px;
+    }
+
+    .article-info .expand-block {
+        flex-basis: 490px;
+    }
+
+    .expand-block__content {
+        margin-bottom: 14px;
+    }
+}
