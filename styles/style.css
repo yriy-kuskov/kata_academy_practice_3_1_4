@@ -12,6 +12,17 @@
 
 @font-face {
     font-family: 'TT Lakes';
+    src: url('../fonts/TTLakes/ttlakes-medium-webfont.eot');
+    src: local('TT Lakes Medium'), local('TTLakes-Medium'),
+         url('../fonts/TTLakes/ttlakes-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/TTLakes/ttlakes-medium-webfont.woff') format('woff'),
+         url('../fonts/TTLakes/ttlakes-medium-webfont.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
     src: url('../fonts/TTLakes/ttlakes-bold-webfont.eot');
     src: local('TT Lakes Bold'), local('TTLakes-Bold'),
          url('../fonts/TTLakes/ttlakes-bold-webfont.eot?#iefix') format('embedded-opentype'),
@@ -34,6 +45,17 @@
 
 @font-face {
     font-family: "TT Lakes";
+    src: url("../fonts/TTLakes/ttlakes-mediumitalic-webfont.eot");
+    src: local("TT Lakes Medium Italic"), local("TTLakes-MediumItalic"), 
+         url("../fonts/TTLakes/ttlakes-mediumitalic-webfont.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/TTLakes/ttlakes-mediumitalic-webfont.woff") format("woff"),
+         url("../fonts/TTLakes/ttlakes-mediumitalic-webfont.ttf") format("truetype");
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "TT Lakes";
     src: url("../fonts/TTLakes/ttlakes-bolditalic-webfont.eot");
     src: local("TT Lakes Bold Italic"), local("TTLakes-BoldItalic"), 
          url("../fonts/TTLakes/ttlakes-bolditalic-webfont.eot?#iefix") format("embedded-opentype"),
@@ -42,11 +64,6 @@
     font-weight: bold;
     font-style: italic;
 }
-
-/** 
- * TODO: добавить шрифт TTLakes для значения `font-weight: 500;`
- * Это шрифт TTLakes medium: https://webfonts.pro/base-web-fonts/sans-serif-grotesque/897-tt-lakes.html#Medium 
-**/
 
 /* Смотри: https://qna.habr.com/q/520184 */
 html,
@@ -156,9 +173,12 @@ button {
     margin-left: auto;
 }
 
+.main-header__wrapper {
+    margin-bottom: 24px;
+}
+
 .page-title {
     margin: 0;
-    margin-bottom: 24px;
 }
 
 .page-title::before {
@@ -188,8 +208,20 @@ button {
     height: 40px;
 }
 
+.icons-menu__item a {
+    display: block;
+}
+
+.icons-menu__item a::after {
+    vertical-align: middle;
+}
+
 .icons-menu__item:not(:first-child) {
    margin-left: 16px;
+}
+
+.icons-menu__text {
+    font-weight: 500;
 }
 
 .slide-menu {
@@ -226,25 +258,26 @@ button {
     position: relative;
     overflow: hidden;
     width: 100%;
-    min-height: 230px;
+    min-height: 176px;
 }
 
 .article-info__img-container img {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform:translate(-50%,-50%);
+    transform: translate(-50%,-50%);
     width: 100%;
-    height: 307px;
+    height: 176px;
     object-fit: cover;
 }
 
 .article-info .expand-block {
     margin-bottom: 16px;
+    padding: 0 16px;
 }
 
 .expand-block {
-    padding: 0 16px;
+    padding: 0;
 }
 
 .expand-block__content {
@@ -272,14 +305,245 @@ button {
     margin-right: 8px;
 }
 
-.round-btn-burger::before {
+.round-btn-burger::after {
     content: url("../images/icons/burger.svg");
 }
 
-.round-btn-checkstatus::before {
+.round-btn-checkstatus::after {
     content: url("../images/icons/checkstatus.svg");
 }
 
-.round-btn-repair::before {
+.round-btn-repair::after {
     content: url("../images/icons/repair.svg");
+}
+
+.round-btn-chat::after {
+    content: url("../images/icons/chat.svg");
+}
+
+.round-btn-call::after {
+    content: url("../images/icons/call.svg");
+}
+
+.round-btn-profile::after {
+    content: url("../images/icons/profile.svg");
+}
+
+@media (min-width: 768px) {
+    body {
+        line-height: 20px;
+    }
+
+    .main-nav__divider:first-of-type {
+        position: unset;
+        width: unset;
+        height: unset;
+        margin: unset;
+        border: unset;
+        padding: unset;
+        white-space: unset;
+        clip-path: unset;
+        clip: unset;
+        overflow: unset;
+    }
+
+    .main-nav .icons-menu:nth-of-type(2) {
+        position: unset;
+        width: auto;
+        height: auto;
+        margin: 0;
+        margin-left: auto;
+        border: 0;
+        padding: 0;
+        white-space: nowrap;
+        clip-path: unset;
+        clip: unset;
+        overflow: unset;
+    }
+
+    .main-nav .icons-menu:first-of-type {
+        margin-right: 20px;
+    }
+
+    .main-nav__logo {
+        margin-left: 20.73px;
+    }
+
+    .main-nav__divider:last-of-type {
+        margin-left: 20px;
+    }
+
+    .main-header__wrapper {
+        margin-bottom: 32px;
+    }
+
+    .page-title::before {
+        margin-right: 20px;
+    }
+
+    .main-header {
+        margin-bottom: 32px;
+    }
+
+    .slide-nav {
+        padding-left: 24px;
+    }
+
+    .article-info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        padding: 0 24px;
+    }
+
+    .article-info .expand-block {
+        padding: 0;
+    }
+
+    .article-info__img-container {
+        min-height: 208px;
+        flex-basis: 360px;
+        margin-left: 48px;
+    }
+    
+    .article-info__img-container img {
+        height: 208px;
+    }
+
+    .expand-block {
+        flex-basis: 312px;
+        flex-grow: 1;
+    }
+
+    .expand-block__content {
+        margin-bottom: 10px;
+        max-height: 160px;
+        overflow-y: hidden;
+    }
+
+    .expand-block__content p:first-of-type {
+        margin-top: 0;
+    }
+    
+}
+
+@media (min-width: 1120px) {
+    .main-header {
+        padding: 42px 25px 0 0;
+    }
+
+    .main-header {
+        margin-bottom: 7px;
+    }
+
+    .main-header__wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .main-nav {
+        margin-left: auto;
+        order: 2;
+        padding: 0 7px 0 0;
+    }
+
+    .main-nav {
+        border-bottom: none;
+        background-color: transparent;
+    }
+
+    .main-nav {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 0;
+        width: auto;
+    }
+
+    .main-nav .icons-menu:nth-of-type(1),
+    .main-nav .icons-menu:nth-of-type(2),
+    .main-nav__divider,
+    .main-nav__divider:first-of-type,
+    .main-nav__logo {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
+
+    .icons-menu:nth-of-type(3) .icons-menu__text {
+        position: unset;
+        width: auto;
+        height: auto;
+        margin: 0;
+        margin-left: auto;
+        border: 0;
+        padding: 0;
+        white-space: nowrap;
+        clip-path: unset;
+        clip: unset;
+        overflow: unset;
+    }
+
+    .icons-menu__item {
+        width: auto;
+        height: auto;
+    }
+
+    .icons-menu__item a::after {
+        margin-left: 9px;
+    }
+
+    .page-title {
+        order: 1;
+    }
+
+    .page-title::before {
+        margin-right: 30px;
+    }
+
+    .slide-nav {
+        padding-left: 34px;
+    }
+
+    .slide-menu {
+        overflow-x: unset;
+        align-items: center;
+    }
+    
+    .slide-menu {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .article-info {
+        margin-bottom: 49px;
+        padding: 0 25px 0 34px;
+    }
+
+    .article-info__img-container {
+        min-height: 307px;
+        flex-basis: 531px;
+        margin-left: 36px;
+    }
+    
+    .article-info__img-container img {
+        height: 307px;
+    }
+
+    .article-info .expand-block {
+        flex-basis: 490px;
+    }
+
+    .expand-block__content {
+        margin-bottom: 14px;
+    }
+
 }
