@@ -80,8 +80,6 @@ body {
     font-style: normal;
     line-height: 18px;
     color: #1b1c21;
-
-    background-color: #f8f8f8;
 }
 
 h1 {
@@ -209,7 +207,8 @@ button {
 }
 
 .page {
-    margin: 0 16px 35px 16px;
+    background-color: #f8f8f8;
+    padding: 0 16px 35px 16px;
 }
 
 .page__content {
@@ -423,7 +422,7 @@ button {
     }
 
     .page {
-        margin: 0 24px 40px 24px;
+        padding: 0 24px 40px 24px;
     }
 
     .main-header__slide-nav {
@@ -553,7 +552,7 @@ button {
     }
 
     .page {
-        margin: 0 25px 49px 34px;
+        padding: 0 25px 49px 34px;
     }
 
     .slide-nav {
