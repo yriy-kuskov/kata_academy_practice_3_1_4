@@ -155,10 +155,13 @@ button {
     margin-left: auto;
 }
 
-.main-nav__logo {
-    width: 96.55px;
-    height: 50.81px;
+.main-nav__logo {    
     margin-right: 16.73px;
+}
+
+.logo {
+    width: 97px;
+    height: 51px;
 }
 
 .main-nav .icons-menu:first-of-type {
@@ -393,6 +396,7 @@ button {
         margin-right: 20px;
     }
 
+    .visually-hidden--show--md,
     .main-nav__divider:first-of-type {
         position: unset;
         width: unset;
@@ -496,6 +500,7 @@ button {
         order: 2;
     }
 
+    .visually-hidden--hide--lg,
     .main-nav .icons-menu:nth-of-type(1),
     .main-nav .icons-menu:nth-of-type(2),
     .main-nav__divider,
@@ -516,6 +521,7 @@ button {
         overflow: hidden;
     }
 
+    .visually-hidden--show--lg,
     .icons-menu:nth-of-type(3) .icons-menu__text {
         position: unset;
         width: auto;

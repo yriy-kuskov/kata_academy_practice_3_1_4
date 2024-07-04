@@ -1,0 +1,33 @@
+.icon-close::after {
+    content: url("../img/icons/close.svg");
+    width: 18px;
+    height: 18px;
+}
+
+.icon-search::after {
+    content: url("../img/icons/search.svg");
+    width: 18px;
+    height: 18px;
+}
+
+.page--theme-white {
+    background-color: #ffffff;
+}
+
+.sidebar {
+    background-color: #ffffff;
+    width: 320px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+}
+
+.sidebar--position--left {
+    left: 0;
+    box-shadow: 0 0 50px -15px #0E1850;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+}

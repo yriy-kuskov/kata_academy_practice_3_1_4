@@ -9,66 +9,87 @@
     <meta name="description" content="Список предоставляемых услуг и сервисов компании CPS. Их описание и цены.">
     <meta name="keywords" content="cps, услуги, сервисы, цены">
 </head>
-<body class="page">
-    <section>
+<body class="page page--theme-white">
+    <section class="sidebar sidebar--position--left">
         <header>
-            <button>
-                Закрыть
+            <button class="complex-button">
+                <span class="complex-button__title visually-hidden">Закрыть</span>
+                <span class="complex-button__icon complex-button__icon--theme--pink icon-close"></span>
             </button>
-            <a href="index.html">
-                <img src="" alt="Логотип компании CPS" width="" height="">
+            <a href="index.html" title="На главную">
+                <img class="logo" src="img/cps_logo.svg" alt="Логотип компании CPS" width="98" height="52">
             </a>
-            <button>
-                Поиск по сайту
+            <button class="complex-button">
+                <span class="complex-button__title visually-hidden">Поиск по сайту</span>
+                <span class="complex-button__icon complex-button__icon--theme--pink icon-search"></span>
             </button>
         </header>
 
         <nav>
-            <ul>
-                <li>Ремонт техники</li>
-                <li>Услуги и сервисы</li>
-                <li>Корпоративным клиент</li>
-                <li>Продавцам техники</li>
-                <li>Партнерам</li>
-                <li>Производителям</li>
-                <li>Наши сервисные центр Copy 2</li>
-                <li>Контакты</li>
+            <ul class="vertical-menu">
+                <li class="vertical-menu__item">
+                    <a href="">Ремонт техники</a>
+                </li>
+                <li class="vertical-menu__item">
+                    Услуги и сервисы
+                </li>
+                <li class="vertical-menu__item">
+                    Корпоративным клиент
+                </li>
+                <li class="vertical-menu__item">
+                    Продавцам техники
+                </li>
+                <li class="vertical-menu__item">
+                    Партнерам
+                </li>
+                <li class="vertical-menu__item">
+                    Производителям
+                </li>
+                <li class="vertical-menu__item">
+                    Наши сервисные центр Copy 2
+                </li>
+                <li class="vertical-menu__item">
+                    Контакты
+                </li>
             </ul>
     
-            <ul>
-                <li>
-                    <a href="">
-                        Позвонить
+            <ul class="icons-menu">
+                <li class="icons-menu__item">
+                    <a class="complex-button" href="">
+                        <span class="complex-button__title visually-hidden">Позвонить</span> 
+                        <span class="complex-button__icon complex-button__icon--theme--pink icon-call"></span>
                     </a>
                 </li>
-                <li>
-                    <a href="">
-                        Написать
+                <li class="icons-menu__item">
+                    <a class="complex-button" href="">
+                        <span class="complex-button__title visually-hidden">Написать</span>
+                        <span class="complex-button__icon complex-button__icon--theme--pink icon-chat"></span>
                     </a>
                 </li>
-                <li>
-                    <a href="">
-                        Профиль
+                <li class="icons-menu__item">
+                    <a class="complex-button" href="">
+                        <span class="complex-button__title visually-hidden">Профиль</span>
+                        <span class="complex-button__icon complex-button__icon--theme--pink icon-profile"></span>
                     </a>
                 </li>
             </ul>
         </nav>
         
         <footer>
-            <address>
-                <a href="mailto:mail@cps.com">mail@cps.com</a>
-                <a href="tel:88008908900">8 800 890 8900</a>
+            <address class="contact-info">
+                <a class="contact-info__email" href="mailto:mail@cps.com">mail@cps.com</a>
+                <a class="contact-info__tel" href="tel:88008908900">8 800 890 8900</a>
             </address>
-            <form action="/change-lang" method="post">
-                    <label>
-                        <input type="radio" name="lang"> ru
+            <form class="lang-switcher" action="/change-lang" method="post">
+                    <label class="lang-switcher__lang">
+                        <input type="radio" name="lang" checked> ru
                     </label>
                 
-                    <label>
+                    <label class="lang-switcher__lang">
                         <input type="radio" name="lang"> en
                     </label>
                 
-                    <label>
+                    <label class="lang-switcher__lang">
                         <input type="radio" name="lang"> ch
                     </label>
             </form>
