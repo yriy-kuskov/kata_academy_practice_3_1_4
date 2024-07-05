@@ -125,14 +125,38 @@ button {
     overflow: hidden;
 }
 
+/* page block */
+.page {
+    background-color: #f8f8f8;
+    padding: 0 16px 35px 16px;
+}
+
+.page__content {
+    margin: 0 -16px;
+}
+
 .page__header {
     margin-bottom: 24px;
+}
+
+.page--theme-white {
+    background-color: #ffffff;
+}
+
+/* main-header block */
+.main-header__slide-nav {
+    margin-right: -16px;
 }
 
 .main-header__wrapper {
     margin: 0 -16px 24px -16px;
 }
 
+.main-header__nav {
+    margin-bottom: 24px;
+}
+
+/* main-nav block */
 .main-nav {
     display: flex;
     align-items: center;
@@ -143,8 +167,12 @@ button {
     background-color: #ffffff;
 }
 
-.main-header__nav {
-    margin-bottom: 24px;
+.main-nav .icons-menu:first-of-type {
+    margin-right: 16.73px;
+}
+
+.main-nav .icons-menu:last-of-type {
+    margin-left: 20px;
 }
 
 .main-nav__divider::before {
@@ -159,6 +187,7 @@ button {
     margin-right: 16.73px;
 }
 
+/* logo block */
 .logo {
     transition-duration: 0.3s;
     transition-property: opacity;
@@ -174,14 +203,7 @@ button {
     height: 51px;
 }
 
-.main-nav .icons-menu:first-of-type {
-    margin-right: 16.73px;
-}
-
-.main-nav .icons-menu:last-of-type {
-    margin-left: 20px;
-}
-
+/* page-title block */
 .page-title {
     margin: 0;
 }
@@ -193,6 +215,7 @@ button {
     vertical-align: middle;
 }
 
+/* icons-menu block */
 .icons-menu {
     display: flex;
     justify-content: flex-start;
@@ -215,19 +238,7 @@ button {
     font-weight: 500;
 }
 
-.main-header__slide-nav {
-   margin-right: -16px;
-}
-
-.page {
-    background-color: #f8f8f8;
-    padding: 0 16px 35px 16px;
-}
-
-.page__content {
-    margin: 0 -16px;
-}
-
+/* slide-menu block */
 .slide-menu {
     display: flex;
     align-items: center;
@@ -236,7 +247,7 @@ button {
 
     list-style: none;
 
-    overflow-x: scroll;
+    overflow-x: auto;
     
 }
 
@@ -252,6 +263,12 @@ button {
 
     text-wrap: nowrap;
     color: #7e7e82;
+}
+
+/* article-info block */
+.article-info .expand-block {
+    margin-bottom: 16px;
+    padding: 0 16px;
 }
 
 /* Метод обрезки изображения взят отсюда: https://tpverstak.ru/cropping-images-css-svg/ */
@@ -274,11 +291,7 @@ button {
     object-fit: cover;
 }
 
-.article-info .expand-block {
-    margin-bottom: 16px;
-    padding: 0 16px;
-}
-
+/* expand-block block */
 .expand-block {
     padding: 0;
 }
@@ -307,6 +320,8 @@ button {
     vertical-align: middle;
 }
 
+
+/* complex-button block */
 .complex-button {
     display: flex;
     align-items: center;
@@ -330,6 +345,19 @@ button {
 
 .complex-button__icon--theme--pink {
     background-color: #ff3e79;
+}
+
+/* icons */
+.icon-close::after {
+    content: url("../img/icons/close.svg");
+    width: 18px;
+    height: 18px;
+}
+
+.icon-search::after {
+    content: url("../img/icons/search.svg");
+    width: 18px;
+    height: 18px;
 }
 
 .icon-burger::after {

@@ -11,21 +11,21 @@
 </head>
 <body class="page page--theme-white">
     <section class="sidebar sidebar--position--left">
-        <header>
-            <button class="complex-button">
+        <header class="sidebar-header sidebar__header">
+            <button class="complex-button sidebar-header__left-button">
                 <span class="complex-button__title visually-hidden">Закрыть</span>
                 <span class="complex-button__icon complex-button__icon--theme--pink icon-close"></span>
             </button>
-            <a class="logo" href="index.html" title="На главную">
+            <a class="logo sidebar-header__logo" href="index.html" title="На главную">
                 <img class="logo__image" src="img/cps_logo.svg" alt="Логотип компании CPS" width="98" height="52">
             </a>
-            <button class="complex-button">
+            <button class="complex-button sidebar-header__right-button">
                 <span class="complex-button__title visually-hidden">Поиск по сайту</span>
                 <span class="complex-button__icon complex-button__icon--theme--pink icon-search"></span>
             </button>
         </header>
 
-        <nav>
+        <nav class="sidebar__nav">
             <ul class="vertical-menu">
                 <li class="vertical-menu__item vertical-menu__item--status--active">
                     <a href="">Ремонт техники</a>
@@ -54,8 +54,8 @@
             </ul>
         </nav>
         
-        <footer>
-            <ul class="icons-menu">
+        <footer class="sidebar-footer sidebar__footer">
+            <ul class="icons-menu sidebar-footer__icons-menu">
                 <li class="icons-menu__item">
                     <a class="complex-button" href="">
                         <span class="complex-button__title visually-hidden">Позвонить</span> 
@@ -75,7 +75,7 @@
                     </a>
                 </li>
             </ul>
-            <address class="contact-info">
+            <address class="contact-info sidebar-footer__contact-info">
                 <a class="contact-info__email" href="mailto:mail@cps.com">mail@cps.com</a>
                 <a class="contact-info__tel" href="tel:88008908900">8 800 890 8900</a>
             </address>
@@ -101,5 +101,8 @@
             </form>
         </footer>
     </section>
+    <main>
+
+    </main>
 </body>
 </html>
