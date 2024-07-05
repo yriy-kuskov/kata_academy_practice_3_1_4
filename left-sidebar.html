@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/left-sidebar.css">
+    <link rel="stylesheet" href="css/style.css?=123456">
+    <link rel="stylesheet" href="css/left-sidebar.css?=123456">
     <title>Ремонт техники</title>
     <meta name="description" content="Список предоставляемых услуг и сервисов компании CPS. Их описание и цены.">
     <meta name="keywords" content="cps, услуги, сервисы, цены">
@@ -16,8 +16,8 @@
                 <span class="complex-button__title visually-hidden">Закрыть</span>
                 <span class="complex-button__icon complex-button__icon--theme--pink icon-close"></span>
             </button>
-            <a href="index.html" title="На главную">
-                <img class="logo" src="img/cps_logo.svg" alt="Логотип компании CPS" width="98" height="52">
+            <a class="logo" href="index.html" title="На главную">
+                <img class="logo__image" src="img/cps_logo.svg" alt="Логотип компании CPS" width="98" height="52">
             </a>
             <button class="complex-button">
                 <span class="complex-button__title visually-hidden">Поиск по сайту</span>
@@ -27,32 +27,34 @@
 
         <nav>
             <ul class="vertical-menu">
-                <li class="vertical-menu__item">
+                <li class="vertical-menu__item vertical-menu__item--status--active">
                     <a href="">Ремонт техники</a>
                 </li>
                 <li class="vertical-menu__item">
-                    Услуги и сервисы
+                    <a href="">Услуги и сервисы</a>
                 </li>
                 <li class="vertical-menu__item">
-                    Корпоративным клиент
+                    <a href="">Корпоративным клиент</a>
                 </li>
                 <li class="vertical-menu__item">
-                    Продавцам техники
+                    <a href="">Продавцам техники</a>
                 </li>
                 <li class="vertical-menu__item">
-                    Партнерам
+                    <a href="">Партнерам</a>
                 </li>
                 <li class="vertical-menu__item">
-                    Производителям
+                    <a href="">Производителям</a>
                 </li>
                 <li class="vertical-menu__item">
-                    Наши сервисные центр Copy 2
+                    <a href="">Наши сервисные центры</a>
                 </li>
                 <li class="vertical-menu__item">
-                    Контакты
+                    <a href="">Контакты</a>
                 </li>
             </ul>
-    
+        </nav>
+        
+        <footer>
             <ul class="icons-menu">
                 <li class="icons-menu__item">
                     <a class="complex-button" href="">
@@ -73,25 +75,29 @@
                     </a>
                 </li>
             </ul>
-        </nav>
-        
-        <footer>
             <address class="contact-info">
                 <a class="contact-info__email" href="mailto:mail@cps.com">mail@cps.com</a>
                 <a class="contact-info__tel" href="tel:88008908900">8 800 890 8900</a>
             </address>
             <form class="lang-switcher" action="/change-lang" method="post">
-                    <label class="lang-switcher__lang">
-                        <input type="radio" name="lang" checked> ru
+                <div class="lang-switcher__lang">
+                    <input type="radio" name="lang" id="ru" checked>
+                    <label class="lang-switcher__lang" for="ru">
+                        ru
                     </label>
-                
-                    <label class="lang-switcher__lang">
-                        <input type="radio" name="lang"> en
+                </div>
+                <div class="lang-switcher__lang">
+                    <input type="radio" name="lang" id="en">
+                    <label class="lang-switcher__lang" for="en">
+                        en
                     </label>
-                
-                    <label class="lang-switcher__lang">
-                        <input type="radio" name="lang"> ch
+                </div>
+                <div class="lang-switcher__lang">
+                    <input type="radio" name="lang" id="ch">
+                    <label class="lang-switcher__lang" for="ch">
+                        ch
                     </label>
+                </div>
             </form>
         </footer>
     </section>

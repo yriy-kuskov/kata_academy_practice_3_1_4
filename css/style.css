@@ -160,6 +160,16 @@ button {
 }
 
 .logo {
+    transition-duration: 0.3s;
+    transition-property: opacity;
+    transition-timing-function: ease-out;
+}
+
+.logo:hover {
+    opacity: 0.8;
+}
+
+.logo__image {
     width: 97px;
     height: 51px;
 }
@@ -185,7 +195,7 @@ button {
 
 .icons-menu {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin: 0;
     padding: 0;
 
@@ -300,6 +310,7 @@ button {
 .complex-button {
     display: flex;
     align-items: center;
+    transition: opacity ease-out 0.3s;
 }
 
 .complex-button:hover,
@@ -315,7 +326,6 @@ button {
     height: 40px;
     border-radius: 50%;
     background-color: #eeeeee;
-    transition: opacity ease-out 0.2s;
 } 
 
 .complex-button__icon--theme--pink {
